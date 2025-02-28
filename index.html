@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="My Description">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav role="navigation">
+            <span class="menu-icon">&#9776;</span>
+            <ul>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about-me">
+        <h2>About Me</h2>
+        <p>Hello! I am a passionate developer with experience in various technologies. I love creating web applications and learning new skills.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <label for="project-filter">Filter by category:</label>
+        <select id="project-filter" onchange="filterProjects(this.value)">
+            <option value="all">All</option>
+            <option value="web">Web</option>
+            <option value="mobile">Mobile</option>
+            <option value="desktop">Desktop</option>
+        </select>
+        <article data-category="web">
+            <h3>Project 1</h3>
+            <figure>
+                <a href="#lightbox1"><img src="project1.jpg" alt="Project 1 Screenshot"></a>
+                <figcaption>Project 1 Description</figcaption>
+            </figure>
+        </article>
+        <article data-category="mobile">
+            <h3>Project 2</h3>
+            <figure>
+                <a href="#lightbox2"><img src="project2.jpg" alt="Project 2 Screenshot"></a>
+                <figcaption>Project 2 Description</figcaption>
+            </figure>
+        </article>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <form id="contact-form" action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <span class="error-message" id="name-error">Name is required.</span>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error-message" id="email-error">Valid email is required.</span>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <span class="error-message" id="message-error">Message is required.</span>
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio</p>
+    </footer>
+
+    <!-- Lightbox elements -->
+    <div id="lightbox1" class="lightbox">
+        <img src="project1.jpg" alt="Project 1 Screenshot">
+    </div>
+    <div id="lightbox2" class="lightbox">
+        <img src="project2.jpg" alt="Project 2 Screenshot">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
